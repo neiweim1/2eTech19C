@@ -36,7 +36,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             ArrayList dzielniki = new ArrayList();
-            dzielniki = kp3z3(12);
+            int n = int.Parse(Console.ReadLine());
+            dzielniki = kp3z3(n);
             foreach (int a in dzielniki)
             {
                 Console.Write(a+" ")
