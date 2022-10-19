@@ -17,13 +17,14 @@ class Program {
               }
           Console.WriteLine();*/
       //gwiazdki
-        int n = 1;
+       int n = 0;
         for (int i=5; i>n; i--){
               for (int j=1; j<i+1; j++){
                 Console.Write("*"+"\t");
               }
           Console.WriteLine();
         }
+        
         
     }
 }
