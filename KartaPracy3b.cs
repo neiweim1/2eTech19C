@@ -5,7 +5,7 @@ namespace ConsoleApp3
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //zad 1
             /*
@@ -54,6 +54,36 @@ namespace ConsoleApp3
             }
             Console.WriteLine(suma);
             */
+            //zad6
+            /*
+            int k, suma = 0;
+            Console.WriteLine("podaj liczbe: ");
+            k = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= k; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    suma += i;
+                }
+            }
+            Console.WriteLine(suma);
+            */
+            //zad7
+            /*
+            int m, suma=0;
+            Console.WriteLine("Podaj liczbe dwucyfrową: ");
+            m = int.Parse(Console.ReadLine());
+            for (int i = 10; i < m; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    suma += i;
+                }
+                
+            }
+            Console.WriteLine(suma);
+            */
+
 
             //zad 8
             /*
@@ -78,17 +108,22 @@ namespace ConsoleApp3
             Console.WriteLine($"Kwota wyjościowa {w0}");
             */
             //zad 9
-
-            //zad 10
             /*
-            for (int i = 1; i < 1000; i++)
+            int n, suma = 0;
+            Console.WriteLine("podaj liczbe: ");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= (n - 1) * 100 + 21; i += 100)
             {
-                if (Math.Sqrt(i)%1==0)
-                {
-                    Console.WriteLine(i);
-                }
+                suma += i;
             }
+            Console.WriteLine(suma);
             */
+            //zad 10
+            /*for (double i = 1; i <= 1000; i++)
+            {
+                if (i * i == Math.Sqrt(i)) 
+            }*/
+
         }
     }
 }
