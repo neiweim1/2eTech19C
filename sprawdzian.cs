@@ -15,7 +15,7 @@ namespace ConsoleApp4
             int k = int.Parse(Console.ReadLine());
             int s = int.Parse(Console.ReadLine());
             //a
-            if ((s/2)*5 >= k)
+            if (s*5 >= k)
             {
                 Console.WriteLine("a) TAK");
             }
