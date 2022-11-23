@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp3
 {
@@ -81,10 +82,10 @@ namespace ConsoleApp3
         }
     }
 
-    internal class Librabry_database
+    internal class Library_database
     {
         public List<string> List_Of_Books = new List<string>();
-        public Library_Management_System Data;
+        public Librarian Data;
         public void Add()
         {
             Console.WriteLine("Librabry_database: Add");
@@ -116,7 +117,7 @@ namespace ConsoleApp3
     internal class Library_Management_System
     {
         string UserType, Username, Password;
-        
+
         public void Login()
         {
             Console.WriteLine("Librabry_Management_System: Login");
@@ -131,13 +132,16 @@ namespace ConsoleApp3
         }
     }
 
-        class Program
+    class Program
+    {
+        static void Main()
         {
-            static void Main()
-            {
-                Librarian book = new Librarian();
-                Library_Management_System data = new Library_Management_System();
-                
-            }
+            Library_database library_Database = new Library_database();
+            library_Database.Data = new Librarian();
+
+            Librarian l = new Librarian();
+            l.book = new Book();
+
         }
+    }
 }
