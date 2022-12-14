@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,40 +10,54 @@ namespace ConsoleApp4
     class Koszyk
     {
         private int id;
-        private Produkt(produkt); //kompozycja
-        private Uzytkownik uzytkownik //agregacja
+        private Produkt produkt; //kompozycja metoda/konstruktor
+        private Uzytkownik uzytkownik;//agregacja setery
 
-        public void getId(int id){
+        public void getId(int id)
+        {
             this.id = id;
         }
 
-        public void operation(){
-            Console.WriteLine("Operacja??")
+        public void operation()
+        {
+            Console.WriteLine("Operacja??");
+        }
+
+        public Koszyk(int id, Produkt produkt)
+        {
+            this.id = id;
+            this.produkt = produkt;
+            
+        }
+
+        public void setUzytkownik(Uzytkownik user)
+        {
+            this.uzytkownik = user;
         }
     }
 
     class Produkt
     {
         private string name;
-        private double cena;
+        private double price;
         private string opis;
 
-        public void getNazwa(string name)
+        public void getName(string name)
         {
-            this.nazwa = name;
+            this.name = name;
         }
 
-        public void getCena(double price){
-            this.cena = price;
+        public void getCena(double price)
+        {
+            this.price = price;
         }
 
-        public void getOpis(string text){
+        public void getOpis(string text)
+        {
             this.opis = text;
         }
 
-        public Produkt(string name, double price, string text){
-            return name, price, text;
-        }
+        
 
     }
 
@@ -50,11 +65,19 @@ namespace ConsoleApp4
     {
         private string login;
         private string haslo;
-        private profil //kompozycja
+        private Profil profil; //kompozycja
 
-        public void loguj(){
-            Console.Write("login:"+login"\n hasło:"+haslo)
-        } 
+        public void loguj()
+        {
+            Console.Write("login:" + login+"\n hasło:" + haslo);
+        }
+
+        public Uzytkownik(Profil profil, string login, string haslo)
+        {
+            this.profil = profil;
+            this.login = login;
+            this.haslo = haslo;
+        }
 
     }
 
@@ -62,22 +85,24 @@ namespace ConsoleApp4
     {
         private string imie;
         private string drugieimie;
-        private string nazwsiko;
-        
-        public void getImie(){
-            this.imie = aimie;
+        private string nazwisko;
+
+        public void getImie(string imie)
+        {
+            this.imie = imie;
         }
-        public void getNazwisko(){
-            this.nazwisko = surname;
+        public void getNazwisko(string nazwisko)
+        {
+            this.nazwisko = nazwisko;
         }
 
     }
-   
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
