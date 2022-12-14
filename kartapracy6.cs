@@ -10,7 +10,8 @@ namespace ConsoleApp4
 
     internal class Program
     {
-        public static bool artymetyczny(int a, int b, int c)
+        //zad1
+        /*public static bool artymetyczny(int a, int b, int c)
         {
             if ((c-b == b - a)||(a-b==b-c)) return true;
             else return false;
@@ -41,7 +42,26 @@ namespace ConsoleApp4
             if (geometryczny(tab[0], tab[1], tab[2])) Console.WriteLine("geometryczny ciąg");
 
 
-        }
+        }*/
+
+        
+        /*static void Main(string[] args)
+        {
+            //zad2
+            int s = 0;
+            for (int i = 100; i < 1000; i++)
+            {
+                if(i%8==0 && i % 16 != 0)
+                {   
+                    s += i;
+                    Console.WriteLine(i);
+                }
+                
+
+            }
+            Console.WriteLine(s);
+
+        }*/
 
     }
 }
