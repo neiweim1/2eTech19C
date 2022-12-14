@@ -3,34 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp4
 {
     class Rower
     {
-        
-        private string color;
-        public string material; // agregacja
-        public Producent producent; // kompozycja
-        public Producent(name Lukasz, nip 123){
-            this.name = Lukasz;
-            this.nip = 123;
-        }
 
-        public void setMaterial(Material cos){
+        private string color;
+        public Material material; // agregacja setery?
+        public Producent producent; // kompozycja metoda/konstruktor?
+        
+
+        public void setMaterial(Material cos)
+        {
             this.material = cos;
         }
 
-        public void jedz(){
+        
+
+        public void jedz()
+        {
             Console.WriteLine("jadę");
         }
 
-        public string setColor(){
+        public string setColor()
+        {
             return color;
         }
 
-        public void getColor(string kolor){
+        public void getColor(string kolor)
+        {
             this.color = kolor;
+        }
+
+        public Rower(Producent producent, string color)
+        {
+            this.producent = producent;
+            this.color = color;
         }
 
     }
@@ -39,15 +49,24 @@ namespace ConsoleApp4
     {
         private string name;
         private string nip;
-        
-        public string setNazwa(){
+
+        public string setNazwa()
+        {
             return name;
         }
-        public void getNazwar(string nazwa){
+        public void getNazwar(string nazwa)
+        {
             this.name = nazwa;
         }
 
-        public void getNip(string nip){
+        public void getNip(string nip)
+        {
+            this.nip = nip;
+        }
+
+        public Producent(string name, string nip)
+        {
+            this.name = name;
             this.nip = nip;
         }
     }
@@ -58,28 +77,32 @@ namespace ConsoleApp4
         private int id;
         private double cena;
 
-        public string setTyp(){
+        public string setTyp()
+        {
             return typ;
         }
 
-        public void getTyp(string typ){
+        public void getTyp(string typ)
+        {
             this.typ = typ;
         }
 
-        public void getCena(double price){
+        public void getCena(double price)
+        {
             this.cena = price;
         }
 
-        public int setId(){
+        public int setId()
+        {
             return id;
         }
-        
+
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
