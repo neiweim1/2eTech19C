@@ -11,7 +11,7 @@ namespace ConsoleApp3
         string color;
         Material material; //agregacja
         Producent producent; //kompozycja
-        Kurwo kurwo; //asocjacja 
+        Kurwa kurwo; //asocjacja 
 
         //agregacja biala - setery!! this!! void!!
         //kompozycja nigga - metody!! >zaden return i zaden static< i konstruktor!! wywoluje ta klase jako metode no konsturktor idioto
@@ -32,14 +32,19 @@ namespace ConsoleApp3
             return color;
         }
         //!zaleznosci!
-        public void setMaterial(Material amaterial)
+        public void setMaterial(Material amaterial)//agregacja
         {
             this.material= amaterial;
         }
 
-        public Rower(Producent aproducent)
+        public Rower(Producent aproducent)//kompozycja
         {
            this.producent = aproducent;
+        }
+        
+        public void maszKurwe(Kurwa kurwo)//asocjacja
+        {
+            this.kurwo = kurwo;
         }
 
 
@@ -48,7 +53,6 @@ namespace ConsoleApp3
     class Material
     {
         string typ;
-
     }
 
     class Producent
@@ -57,9 +61,16 @@ namespace ConsoleApp3
 
     }
 
-    class Kurwo
+    class Kurwa
     {
         int uwu;
+        
+        public Kurwa(int uwu)
+        {
+            this.uwu = uwu;
+        }
+        
+        
     }
     internal class Program
     {
