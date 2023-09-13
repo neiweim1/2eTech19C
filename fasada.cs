@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp7
-{ Wzór fasady (pisany także jako fasada ) to wzorzec projektowania oprogramowania powszechnie stosowany w programowaniu obiektowym . 
+{ /*Wzór fasady (pisany także jako fasada ) to wzorzec projektowania oprogramowania powszechnie stosowany w programowaniu obiektowym . 
 Analogicznie do fasady w architekturze, fasada jest obiektem , który służy jako skierowany do przodu interfejs maskujący bardziej złożony kod podstawowy lub strukturalny. 
 Fasada może:
 poprawić czytelność i użyteczność biblioteki oprogramowania poprzez maskowanie interakcji z bardziej złożonymi komponentami za pojedynczym (i często uproszczonym) interfejsem API
@@ -60,6 +60,7 @@ Wzorce czynnościowe
 • Iterator
 • Łańcuch odpowiedzialności
 • Obserwator
+*/
 
     //fasada strukturalna
     //wzorzec projektowy
