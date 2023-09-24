@@ -28,8 +28,9 @@ namespace ConsoleApp9
     {
         public static void Zamowienie(string rzecz, int ile)
         {
+            Console.WriteLine("------------------------------------");
             Rodzaj z1 = new Rodzaj();
-            if (z1.Kategoria(rzecz) == "") Console.WriteLine("błąd");
+            if (z1.Kategoria(rzecz) == ".") Console.WriteLine("błąd");
             else
             {
                 Polka.Ilosc(ile, z1.Kategoria(rzecz));
@@ -38,12 +39,15 @@ namespace ConsoleApp9
                     Console.WriteLine("Zamówienie dostępne");
                     Console.WriteLine("kod: " + Seria.Kod(rzecz));
                     Magazynier.Magazynuje(z1.Kategoria(rzecz), "Bartosz", "Wancek");
+                    
                 }
                 else
                 {
                     Console.WriteLine("niepoprawna wartość");
                 }
+                
             }
+            Console.WriteLine("-----------------------------------");
         }
     }
 
@@ -55,7 +59,7 @@ namespace ConsoleApp9
             {
                 return rzecz;
             }
-            else { return ""; }
+            else { return "."; }
         }
     }
 
@@ -63,7 +67,7 @@ namespace ConsoleApp9
     {
         public static void Ilosc(int ile, string rzecz)
         {
-            if (ile <= 100 && ile > 0) Console.WriteLine("ilość: " + ile + " przedmiot:" + rzecz);
+            if (ile <= 100 && ile > 0) Console.WriteLine("ilość: " + ile);
             else Console.WriteLine("niepoprawna ilość");
         }
     }
