@@ -1,0 +1,26 @@
+Adapter to strukturalny wzorzec projektowy pozwalający zmienić interfejs jednej klasy na inny. Jego podstawowym zadaniem jest rozwiązanie problemu niepasujących do siebie interfejsów. Używając adaptera możemy zamienić interfejs istniejącej już klasy na taki, który jest nam aktualnie potrzebny. Dzięki temu, wiele klas o różnych interfejsach może ze sobą współpracować.
+
+Wzorzec projektowy Adapter konwertuje interfejs klasy na inny interfejs, jakiego oczekują klienci. Ten wzorzec projektowy pozwala klasom współpracować, co w innym przypadku nie byłoby możliwe z powodu niekompatybilnych interfejsów.
+
+
+Adapter (także: opakowanie, ang. wrapper) – strukturalny wzorzec projektowy, którego celem jest umożliwienie współpracy dwóm klasom o niekompatybilnych interfejsach. Adapter przekształca interfejs jednej z klas na interfejs drugiej klasy. Innym zadaniem omawianego wzorca jest opakowanie istniejącego interfejsu w nowy.
+
+Wzorzec adaptera stosowany jest najczęściej w przypadku, gdy wykorzystanie istniejącej klasy jest niemożliwe ze względu na jej niekompatybilny interfejs. Drugim powodem użycia może być chęć stworzenia klasy, która będzie współpracowała z klasami o nieokreślonych interfejsach.
+
+
+po co?:
+chcemy użyć klasy, która implementuje inny interfejs niż wymagany przez klasę klienta.
+stary system informatyczny wymaga w parametrze metody innego interfejsu, niż interfejs klasy, którą chcemy do niej przekazać.
+integrujemy się z klasą dostarczoną przez inny zespół i chcemy ją opakować w interfejs już istniejący w naszym systemie.
+chcemy ujednolicić kilka klas o różnych interfejsach, które spełniają podobne zadania
+chcemy odseparować warstwę domeny od interfejsu zewnętrznej biblioteki, tak aby nie polegać na interfejsie z zewnątrz, który może się zmienić.
+chcemy opakować klasę, która nie posiada żadnego interfejsu (np. klasa HttpClient w C# nie spełnia żadnego interfejsu, przez co bardzo ciężko ją testować i symulować jej zachowanie).
+
+
+Istnieją dwa warianty wzorca Adapter:
+
+klasowy,
+obiektowy.
+Różnią się one nieznacznie budową oraz właściwościami. Do stworzenia adaptera klasowego wykorzystywane jest wielokrotne dziedziczenie. Klasa adaptera dziedziczy prywatnie po klasie adaptowanej oraz publicznie implementuje interfejs klienta[1]. W przypadku tego adaptera wywołanie funkcji jest przekierowywane do bazowej klasy adaptowanej[4].
+
+W przypadku adaptera obiektowego klasa adaptera dziedziczy interfejs, którym posługuje się klient oraz zawiera w sobie klasę adaptowaną. Rozwiązanie takie umożliwia oddzielenie klasy klienta od klasy adaptowanej[1]. Komplikuje to proces przekazywania żądania: klient wysyła je do adaptera wywołując jedną z jego metod. Następnie adapter konwertuje wywołanie na jedno bądź kilka wywołań i kieruje je do obiektu/obiektów adaptowanych. Te przekazują wyniki działania bezpośrednio do klienta[1][4].
