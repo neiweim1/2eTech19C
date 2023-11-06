@@ -1,0 +1,32 @@
+zad. 3
+a) nl2br()
+b) sttripos(tekst, "J", 0) szukamy ostatniego wystapienia J
+substr(tekst, liczba ostatniego zdania, sttripos(tekst, "J", 0))
+
+c)substr_replace(tekst, "co tam w poleceniu jest", 0, 0)
+
+d)mb_strtoupper()
+e)var_export(mb_split(tekst))
+var_dump(explode(" ", tekst))
+
+
+zad. 4
+a) array_combine(przedmiotow, srednie ocen)
+b) malejąco:
+array_unshift(array, value)
+var_dump(krsort(array))
+
+zad. 5
+a) foreach(range(14, 210, 14) as $n){
+	echo $n."=>"
+}
+
+echo implode("=>", range(14, 210, 14));
+
+b)if(!file_exists(sciezka){
+	mkdir(sciezka)
+}
+
+$f = fopen(sciezka z plikiem textowym, a)
+fwrite($f, implode)
+fclose(f)
