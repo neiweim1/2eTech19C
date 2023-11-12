@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class AnimalType
+    {
+        public string TypeAnimal { get; set; }
+        public void GetTypeAnimal(string A)
+        {
+            TypeAnimal=A;
+            if (A == null)
+            {
+                Console.WriteLine("nie ma takiego zwierzecia lolu"); 
+            }
+            else Console.WriteLine("fajne te twoje type animal:" + A);
+        }
+    }
+
+    class Owner
+    {
+        public string Name { get; set; }
+        public void SetOwner()
+        {
+            Console.WriteLine("jestem owner: "+Name);
+        }
+    }
+
+    class Fasada
+    {
+        public void Fasadka()
+        {
+            AnimalType animalType= new AnimalType();
+            animalType.GetTypeAnimal("małpa Hubert");
+            Owner owner=new Owner();
+            owner.Name = "Dagusia";
+            owner.SetOwner();
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Fasada fasada= new Fasada();
+            fasada.Fasadka();
+        }
+    }
+}

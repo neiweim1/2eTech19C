@@ -1,0 +1,78 @@
+//KOMPOZYT
+Jeśli klasy wszystkich obiektów w drzewie należą do jednej hierarchii to najprawdopodobniej mamy do czynienia z kompozytem. Jeśli dodatkowo metody tych klas delegują zadania obiektom-dzieciom wchodzącym w skład tego drzewa i robią to za pośrednictwem klasy bazowej lub bazowego interfejsu hierarchii, to na pewno jest to kompozyt.
+
+komponentu używa klient, liść1 rozszerza kompozyt(Composite), liść2 rozszerza komponent.
+
+//KOMPOZYT
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp11
+{
+    abstract public class MenuComponent//komponent
+    {
+        public string name { get; set; }
+        public void addComponent(MenuComponent mc) { }
+        public abstract void Display();
+    }
+
+    public class MenuItem : MenuComponent//leaf#1
+    {
+        public MenuItem(string name)
+        {
+            this.name = name;
+        }
+        public override void Display()
+        {
+            Console.WriteLine("nazwa: " + name);
+        }
+    }
+
+    public class MenuComposite : MenuComponent//kompozytor
+    {
+        List<MenuComponent> LMC = new List<MenuComponent>();
+
+        public override void Display()
+        {
+            Console.WriteLine("Wyświetl komponenty:" + LMC); ;
+        }
+
+        public new void addComponent(MenuComponent mc)
+        {
+            LMC.Add(mc);
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            // tworzymy liście
+            MenuComponent menuItem1 = new MenuItem("Element 1");
+            MenuComponent menuItem2 = new MenuItem("Element 2");
+            MenuComponent menuItem3 = new MenuItem("Element 3");
+
+            // Tworzenie kompozytu
+            MenuComponent menuComposite = new MenuComposite();
+
+            // Dodawanie liści do kompozytu
+            menuComposite.addComponent(menuItem1);
+            menuComposite.addComponent(menuItem2);
+
+            // Dodawanie kompozytu do kompozytu
+            MenuComponent subMenuComposite = new MenuComposite();
+            subMenuComposite.addComponent(menuItem3);
+            menuComposite.addComponent(subMenuComposite);
+
+            // Wyświetlanie wszystkich elementów
+            menuComposite.Display();
+
+            // Wyświetlanie pojedynczego elementu
+            menuItem1.Display();
+
+        }
+    }
+}

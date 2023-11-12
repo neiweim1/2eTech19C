@@ -1,0 +1,38 @@
+//fasada
+Użycie Fasady można stwierdzić po istnieniu klasy o uproszczonym interfejsie, która deleguje większość swoich zadań innym klasom. Zazwyczaj fasady zarządzają całym cyklem życia używanych przez siebie obiektów.
+
+Klient uzywa fasday, a inne podklasy mają utworzone obiekty w fasadzie.
+
+
+class LoginAvailable
+{
+    public void LoginCheck()
+    {
+        Console.WriteLine("login dostepny");
+    } 
+}
+class Database
+{
+    public void insert()
+    {
+        Console.WriteLine("dodano usera");
+    }
+}
+internal class User //mini fasadka?? XDDD w skrócie dodawnie z innych klas metod żeby nie pisać tysiąc razy trgo samego
+{
+    public  void registerUser()
+    {
+        LoginAvailable log = new LoginAvailable();
+        Database d = new Database();
+        log.LoginCheck();
+        d.insert();
+    }
+}
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        User s = new User();
+        s.registerUser();
+    }
+}
