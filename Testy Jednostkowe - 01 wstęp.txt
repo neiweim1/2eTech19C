@@ -1,0 +1,28 @@
+Testowanie w C#
+
+- frameworki: MSTEST, nunit i xunit...
+- Bierzemy nunit
+- Testujemy istniejący projekt - dla przykładu kalkulator
+- W Kalkulatorze ma być jedna klasa i 4 metody (+, -, *, /)
+
+class Kalk
+   public int dodaj(int a, int b):
+       return a + b + 1;
+   public void odejmij(a, b):
+       return a - b;
+
+- Do testowania trzeba założyć nowy projekt w solution i podlinkować 
+  go do projektu
+- W Projekcie testowanym trzeba napisać metody testujące:
+  np: 
+  void testMetodDodajCzyDziala()
+    Kalk k = Kalk();
+    int wynik = k.dodaj()
+    Assert.isEqual(wynik, 1, 2, 3)
+    Assert.isEqual(wynik, -1, -2, -3)
+    Assert.isEqual(wynik, 1.5, 2.5, 4)
+
+https://www.youtube.com/watch?v=ZS95nEXU4-I
+
+TESTY JEDNOSTKOWE w C# – 100% Tego, Co Musisz O Nich Wiedzieć
+ModestProgrammer
