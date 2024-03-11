@@ -28,7 +28,7 @@ W referatach 2-6
 
 Referat 2 - S (Single Responsible Principle)
 Referat 3 - O (Open Closed Principle)
-Referat 4 - L 
-Referat 5 - I
-Referat 6 - D
+Referat 4 - L (Liskov substitution principle)
+Referat 5 - I (Interface segregation principle)
+Referat 6 - D (Dependency inversion principle)
 
