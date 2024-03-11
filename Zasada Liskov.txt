@@ -1,0 +1,10 @@
+Liskov:
+
+- Interfejs pojazd (nazwa, marka, metoda zatrąb)
+- Implementuje to samochod (metoda zmień bieg)
+- rozszerza samochod skuter (ale on nie zmienia biegu)
+- stworz listę 4 pojazdów (2 auta i 2 skutery i wywołaj na nich metodę zmianu biegu)
+  (oczywiście w skuterze to nie uda sie)
+
+- Potem tak zmień ten kod by działała zasada Liskov
+

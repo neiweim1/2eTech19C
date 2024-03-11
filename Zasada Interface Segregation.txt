@@ -1,0 +1,14 @@
+Stwórz intefrejs ogród (garden) dla prac ogrodowych pracowników. W nim zawrzyj metody do:
+- kopania
+- sadzenia kwiatów
+- przycinania roślin
+- instalacji wodnej
+- koszenie trawy
+
+tych metod ma być conajmniej 10.
+
+1. No i użyj tego interfejsu dla firmy, która przyjechała by przyciąć róże na wiosnę...
+W metodach nieużuywanych rzuć NotImplemented Exception
+
+2. Popraw interfejs ogród na kilka interfejsów by każdy z nich odpowiadał za jedną rzecz
+i mógł być implementowany przez konkretną firmę, która robi konkretną rzecz.
