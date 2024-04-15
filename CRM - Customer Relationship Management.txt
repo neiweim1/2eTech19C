@@ -1,0 +1,23 @@
+CRM - system zarządzania wszelkimi procesami w przedsiębiorstwie. Ma wiele modułów, których ilość i skomplikowanie zależą od konkretnej firmy.
+
+
+Moduł magazyn
+- Lista Produktów (ID, EAN, IDProducent, nazwa, ilość, jednostka, cena jednostki, netto, vat, brutto)
+- Lista Producentów (ID, nazwa, adres)
+- Lista Dostawców (ID, nazwa, adres)
+- Dostawy (ID, IDDostawcy, data dostawy)
+- ProduktDostawy (ID, IDDostawy, EAN, nazwa, ilość, jednostka, cena jednostki, netto, vat)
+
+Elementy developerskie:
+- baza danych ... ??? na początku w plikach CSV
+- okienka w WPF i wyświetlanie list w gridach (produkty, producenci, Dostawcy, Dostawy)
+
+- Obsługa dostaw - wgranie pliku z dostawą lub wpisanie danych ręcznie lub wyszukanie produktów po kodach i nazwach
+
+
+Moduł relacja z klientem
+
+- role w programie (admin, klient i pracownik)
+- tworzenie projektu
+- podział projektu na zadania
+- rejestrowanie zdarzeń w realizacji zadań
