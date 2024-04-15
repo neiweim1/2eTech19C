@@ -1,0 +1,3 @@
+ID;Nazwa;Kraj
+1;Esbit;USA
+2;Foliarex;Polska

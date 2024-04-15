@@ -1,0 +1,4 @@
+ID;EAN;IDProducent;Nazwa;Ilość;Jednostka;CenaJednostki;Netto;Vat
+;501123456;1;Termos 1L;2;szt;100.00;23
+2;501123458;1;Termos 0,7L;4;szt;80.00;23
+3;501888112;2;Folia Życia;4;szt;15.00;23

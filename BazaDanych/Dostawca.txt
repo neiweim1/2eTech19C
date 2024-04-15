@@ -1,0 +1,3 @@
+ID;Nazwa;Miasto
+1;Bartex;Poznań
+2;Nowax;Wrocław
